@@ -15,7 +15,7 @@ fn main() -> std::io::Result<()> {
     
 
     let mut score: u32 = 0;
-    for (_, line) in reader.lines().enumerate() {
+    for line in reader.lines() {
         let line = line.unwrap();
         let opponent = line.chars().nth(0).unwrap();
         let mychoice = line.chars().nth(2).unwrap();
