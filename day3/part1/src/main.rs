@@ -17,7 +17,7 @@ fn main() -> std::io::Result<()> {
 
     let mut add_sum = |chr: char| if chr.is_lowercase() {sum += chr as u32 - 96} else {sum += chr as u32 - 38};
 
-    for (_, line) in reader.lines().enumerate() {
+    for line in reader.lines() {
         let line = line.unwrap();
         let splitter = (line.len()) / 2;
 
