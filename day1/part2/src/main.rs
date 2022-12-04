@@ -13,7 +13,7 @@ fn main() -> std::io::Result<()> {
     let file = File::open(&args[1]).expect("Input file does not exist");
     let reader = BufReader::new(file);
 
-    for (_, line) in reader.lines().enumerate() {
+    for line in reader.lines() {
         let line = line.unwrap();
         if !(line == "") {
             cur_calories += line.parse::<u32>().unwrap_or(0);
