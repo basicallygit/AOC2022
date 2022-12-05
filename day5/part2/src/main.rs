@@ -65,10 +65,14 @@ fn main() -> std::io::Result<()> {
 
     //-=-=-=-=-=-=- END PARSE INSTRUCTIONS -=-=-=-=-=-=-=-
 
+    let mut output = String::new();
     println!("Final state:");
     for i in 0..9 {
         println!("{}: {:?}", i+1, crates[i]);
+        output.push(crates[i].pop().unwrap());
     }
+    
+    println!("Output: {}", output);
 
 
     Ok(())
