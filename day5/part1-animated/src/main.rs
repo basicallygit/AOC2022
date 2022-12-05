@@ -70,8 +70,6 @@ fn main() -> std::io::Result<()> {
     let mut output = String::new();
     println!("Final state:");
     for i in 0..9 {
-        println!("{}: {:?}", i+1, crates[i]);
-        //add the character ontop of the crates to the output string
         output.push(crates[i].pop().unwrap());
     }
 
